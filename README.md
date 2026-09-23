@@ -21,6 +21,10 @@ The application includes the following **code-level vulnerabilities**:
 | **Code Injection** | `/exec_command` route | Executes user-supplied input as system command |
 | **XSRF** | All forms | No CSRF protection implemented |
 
+### `portal/` (FastAPI service)
+
+`portal/` is a FastAPI + SQLAlchemy + asyncpg service with 41 intentional weaknesses: SQL injection, insecure deserialization, directory traversal, weak input validation, sensitive data exposure, access control, authentication, certificate and signature validation, cookie flags, SSRF, XSS, template and command injection, and open redirect. Several are reached only across functions or modules. Each has a safe twin that must not be reported.
+
 ---
 
 ## Docker Container
